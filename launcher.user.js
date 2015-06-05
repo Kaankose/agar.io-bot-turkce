@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        Launcher
-// @namespace   AposLauncher
+// @namespace   Spendrom
 // @include     http://agar.io/
 // @version     1
 // @grant       none
@@ -14,7 +14,7 @@ Array.prototype.peek = function() {
     return this[this.length-1];
 }
 
-console.log("Running Bot Launcher!");
+console.log("Spendrom Bot Aktive!");
 (function (f, g) {
 
   g('#locationUnknown').append(g('<select id="bList" class="form-control" onchange="setBotIndex($(this).val());" />'));
@@ -675,13 +675,13 @@ console.log("Running Bot Launcher!");
     bestTime = Math.max(nbSeconds, bestTime);
 
     var debugStrings = [];
-    debugStrings.push("T - Bot: " + (!toggle ? "On" : "Off"));
-    debugStrings.push("R - Lines: " + (!toggleDraw ? "On" : "Off"));
+    debugStrings.push("T - Bot: " + (!toggle ? "acik" : "kapali"));
+    debugStrings.push("R - Cizgiler: " + (!toggleDraw ? "acik" : "kapali"));
     debugStrings.push("Server: " + serverIP);
-    debugStrings.push("Survived for: " + nbSeconds + " seconds");
+    debugStrings.push("Hayatta kalma: " + nbSeconds + " saniye");
 
     if (getPlayer().length > 0) {
-        debugStrings.push("Location: " + Math.floor(getPlayer()[0].x) + ", " + Math.floor(getPlayer()[0].y));
+        debugStrings.push("Kordinat: " + Math.floor(getPlayer()[0].x) + ", " + Math.floor(getPlayer()[0].y));
     }
 
     var offsetValue = 20;
@@ -722,7 +722,7 @@ console.log("Running Bot Launcher!");
       a.globalAlpha = 1;
       a.fillStyle = '#FFFFFF';
       c = null;
-      c = 'Leaderboard';
+      c = 'Siralama';
       a.font = '30px Ubuntu';
       a.fillText(c, 100 - a.measureText(c).width /
       2, 40);
